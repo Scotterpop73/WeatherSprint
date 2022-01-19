@@ -12,12 +12,28 @@
     <title>Weather</title>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid bgImage">
         <div class="row">
-            <div class="col-12 text-center">
-                <h1 id="city">Hi</h1>
+            <div class="col-7 d-flex justify-content-end searchMargin">
+                <input type="text" id="inputPassword5" class="col-form-label w-50" aria-describedby="passwordHelpBlock" placeholder="Please Enter In Your Location...">
+            </div>
+            <div class="col-5 d-flex justify-content-start searchMargin">
+                <button id="SubmitBtn" type="button" class="btn btnColor btnFontColor">Submit</button>
             </div>
         </div>
+    
+            <div class="row align-items-center containerBg">
+                <div class="col-4">
+                    <h1 class="cityFont" id="city"></h1>
+                </div>
+                <div class="col-4">
+                    <img src="./images/Icon weather-day-sunny-overcast.png" alt="">
+                </div>
+                <div class="col-4">
+                    <h1 class="cityFont">73°F</h1>
+                </div>
+            </div>
+
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
