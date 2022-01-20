@@ -14,25 +14,97 @@
   <body>
     <div class="container-fluid bgImage">
         <div class="row">
-            <div class="col-7 d-flex justify-content-end searchMargin">
+            <div class="col-1">
+                <img src="./images/Icon feather-star.png" alt="" class="btn">
+            </div>
+            <div class="col-6 d-flex justify-content-end searchMargin">
                 <input type="text" id="inputPassword5" class="col-form-label w-50" aria-describedby="passwordHelpBlock" placeholder="Please Enter In Your Location...">
             </div>
-            <div class="col-5 d-flex justify-content-start searchMargin">
+            <div class="col-4 d-flex justify-content-start searchMargin">
                 <button id="SubmitBtn" type="button" class="btn btnColor btnFontColor">Submit</button>
             </div>
         </div>
     
-            <div class="row align-items-center containerBg">
-                <div class="col-4">
-                    <h1 class="cityFont" id="city"></h1>
+           <div class="d-flex justify-content-center">
+                <div class="card cardOpacity border-secondary" style="width: 80rem;">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-7">
+                                <h1 class="cityFont" id="city"></h1> 
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/Icon weather-day-sunny-overcast.png" alt="">
+                            </div>
+                            <div class="col-2">
+                                <h1 class="cityFont">70°F</h1>
+                            </div>
+                            <div class="col-1">
+                                <img src="./images/Icon feather-starBlack.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row descriptionMargin">
+                            <div class="col-12 d-flex justify-content-end">
+                                <p class="descriptionFont">Mostly Sunny</p>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <p class="dateFont">Saturday January 15th, 2022 11:11 AM</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-end">
+                                <p class="descriptionFont">FEELS LIKE 65°F</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-end">
+                                <p class="descriptionFont">MIN: 40 MAX: 70</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <p class="humidityFont">Humidity</p> 
+                            </div>
+                            <div class="col-2 text-center">
+                                <p class="humidityFont">Pressure</p>
+                            </div>
+                            <div class="col-2 text-center">
+                                <p class="humidityFont">Visibility</p> 
+                            </div>
+                            <div class="col-2 text-center">
+                                <p class="humidityFont">Wind</p>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <p class="windSpeedFont">65%</p>
+                            </div>
+                            <div class="col-2 text-center">
+                                <p class="windSpeedFont">30.14 in</p>
+                            </div>
+                            <div class="col-2 text-center">
+                                <p class="windSpeedFont">10.2 mi</p>
+                            </div>
+                            <div class="col-2 text-center">
+                                <p class="windSpeedFont">4 mph</p>
+                            </div>
+                            <div class="col-2 text-center">
+                                <img src="./images/Icon weather-sunrise.png" alt="">
+                                <br>
+                                <p class="windSpeedFont">7:10 AM</p>
+                            </div>
+                            <div class="col-2 text-center">
+                                <img src="./images/Icon weather-sunset.png" alt="">
+                                <br>
+                                <p class="windSpeedFont">5:00 PM</p>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div class="col-4">
-                    <img src="./images/Icon weather-day-sunny-overcast.png" alt="">
-                </div>
-                <div class="col-4">
-                    <h1 class="cityFont">73°F</h1>
-                </div>
-            </div>
+           </div>
 
     </div>
 
