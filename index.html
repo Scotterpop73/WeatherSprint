@@ -17,15 +17,15 @@
             <div class="col-1">
             <nav class="navbar navbar-light top">
                 <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                  <button id="favBtn" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <img src="./images/Icon feather-star.png" alt="">
                   </button>
                   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
                       <img class="text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close" src="./images/Icon feather-starColored.png" alt="">
                     </div>
-                    <div class="offcanvas-body">
-                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <div class="offcanvas-body" id="injectHere">
+                      <!-- <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item text-center">
                           <a class="nav-link active navbarFont" aria-current="page" href="#">San Francisco, US</a>
                         </li>
@@ -38,7 +38,7 @@
                             <a class="nav-link active navbarFont" aria-current="page" href="#">San Diego, US</a>
                           </li>
                           <hr>   
-                      </ul>
+                      </ul> -->
                     </div>
                   </div>
                 </div>
@@ -61,7 +61,7 @@
                                 <h1 class="cityFont" id="cityText"></h1> 
                             </div>
                             <div class="col-2">
-                                <img src="./images/Icon weather-day-sunny-overcast.png" alt="">
+                                <img id="icon1" src="./images/Icon weather-day-sunny-overcast.png" alt="">
                             </div>
                             <div class="col-2">
                                 <h1 class="cityFont" id="tempText">70°F</h1>
@@ -117,12 +117,12 @@
                                 <p class="windSpeedFont" id="windText">4 mph</p>
                             </div>
                             <div class="col-2 text-center">
-                                <img src="./images/Icon weather-sunrise.png" alt="">
+                                <img id="sunriseImg" src="./images/Icon weather-sunrise.png" alt="">
                                 <br>
                                 <p class="windSpeedFont" id="sunriseText">7:10 AM</p>
                             </div>
                             <div class="col-2 text-center">
-                                <img src="./images/Icon weather-sunset.png" alt="">
+                                <img id="sunsetImg" src="./images/Icon weather-sunset.png" alt="">
                                 <br>
                                 <p class="windSpeedFont" id="sunsetText">5:00 PM</p>
                             </div>
@@ -137,7 +137,7 @@
                     <div class="card-body">
                       <p class="cardFont" id="card1DayText">Sunday</p>
                       <br>
-                      <img src="./images/Icon metro-weather.png" alt="">
+                      <img id="icon2" src="./images/Icon metro-weather.png" alt="">
                       <br>
                       <p class="cardFont pt-5" id="card1MaxText">78°F</p>
                       <br>
@@ -150,7 +150,7 @@
                     <div class="card-body">
                       <p class="cardFont" id="card2DayText">Monday</p>
                       <br>
-                      <img src="./images/Icon metro-weather.png" alt="">
+                      <img id="icon3" src="./images/Icon metro-weather.png" alt="">
                       <br>
                       <p class="cardFont pt-5" id="card2MaxText">78°F</p>
                       <br>
@@ -163,7 +163,7 @@
                     <div class="card-body">
                       <p class="cardFont" id="card3DayText">Tuesday</p>
                       <br>
-                      <img src="./images/Icon metro-weather.png" alt="">
+                      <img id="icon4" src="./images/Icon metro-weather.png" alt="">
                       <br>
                       <p class="cardFont pt-5" id="card3MaxText">78°F</p>
                       <br>
@@ -176,7 +176,7 @@
                     <div class="card-body">
                       <p class="cardFont" id="card4DayText">Wednesday</p>
                       <br>
-                      <img src="./images/Icon metro-weather.png" alt="">
+                      <img id="icon5" src="./images/Icon metro-weather.png" alt="">
                       <br>
                       <p class="cardFont pt-5" id="card4MaxText">78°F</p>
                       <br>
@@ -189,7 +189,7 @@
                     <div class="card-body">
                       <p class="cardFont" id="card5DayText">Thursday</p>
                       <br>
-                      <img src="./images/Icon metro-weather.png" alt="">
+                      <img id="icon6" src="./images/Icon metro-weather.png" alt="">
                       <br>
                       <p class="cardFont pt-5" id="card5MaxText">78°F</p>
                       <br>
@@ -206,6 +206,7 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="./scripts/app.js" type="module"></script>
+    <script src="./scripts/geolocation.js" type="module"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

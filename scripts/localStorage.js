@@ -1,13 +1,13 @@
-let favorites = [];
 
 function SaveToLocalStorageByCityName(cityName)
 {
-    GetLocalStorage();
-    favorites.push(cityName);
-    localStorage.setItem('Favorites',JSON.stringify(favorites));
+    let favorites = GetLocalStorage();
+    
+    favorites.push(cityName.toLowerCase());
+    SaveToLocalStorage(favorites);
 }
 
-function SaveToLocalStorage(){
+function SaveToLocalStorage(favorites){
     localStorage.setItem('Favorites',JSON.stringify(favorites));
 }
 
@@ -15,25 +15,23 @@ function GetLocalStorage(){
     let localStorageData = localStorage.getItem('Favorites');
     if(localStorageData == null)
     {
-        favorites = [];
-    }else{
-        favorites - JSON.parse(localStorageData);
+       return [];
     }
-
-    //favorites = JSON.parse(localStorage.getItem('Favorites'));
-    return favorites;
+        return JSON.parse(localStorageData);
 }
 
 function RemoveFromLocalStorage(cityName){
+    const favorites = GetLocalStorage();
     let cityIndex = favorites.indexOf(cityName);
+
     //found cityname in array favorites
     favorites.splice(cityIndex,1);
-    SaveToLocalStorage();
+    SaveToLocalStorage(favorites);
 }
 
 // localStorage.setItem('people','jateen angel');
 // let people = ['jateen','angel']
-GetLocalStorage();
+//GetLocalStorage();
 //console.log(people);
 //SaveToLocalStorage();
 
